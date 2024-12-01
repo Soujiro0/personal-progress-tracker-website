@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENNEN Personal Progress Tracker</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <link href="../css/landing.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <h1>SEN <br> NEN</h1>
+            <p>Personal Progress Tracker</p>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="text-section">
+            <p>Manage your task progress now!</p>
+            <div class="buttons">
+                <a class="btn" onclick="document.getElementById('loginModal').style.display='block'">Login</a>
+                <a class="btn" onclick="document.getElementById('registerModal').style.display='block'">Register</a>
+            </div>
+        </div>
+        <div class="large-text-section">
+            <h2>SEN <br /> NEN</h2>
+            <p>Track Your Personal Progress</p>
+        </div>
+    </div>
+    <div class="bottom-text">
+        <p>
+            専念 SENNEN<br />
+            Translates to "dedication," "concentration," or "devotion." The act of concentrating one’s efforts and
+            attention on a particular task or goal.
+        </p>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('loginModal').style.display='none'">&times;</span>
+            <h2>Login</h2>
+            <form action="../includes/auth.php" method="POST">
+                <div class="form-group">
+                    <label for="loginUsername">User Name:</label>
+                    <input type="text" id="loginUsername" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="password" required>
+                </div>
+                <button type="submit" class="btn" name="login">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('registerModal').style.display='none'">&times;</span>
+            <h2>Register</h2>
+            <form action="../includes/auth.php" method="POST">
+                <div class="form-group">
+                    <label for="registerUsername">User Name:</label>
+                    <input type="text" id="registerUsername" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerFirstName">First Name:</label>
+                    <input type="text" id="registerFirstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerLastName">Last Name:</label>
+                    <input type="text" id="registerLastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email Address:</label>
+                    <input type="email" id="registerEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password:</label>
+                    <input type="password" id="registerPassword" name="password" required minlength="8" maxlength="16">
+                </div>
+                <div class="form-group">
+                    <label for="registerConfirmPassword">Confirm Password:</label>
+                    <input type="password" id="registerConfirmPassword" name="confirmPassword" required minlength="8" maxlength="16">
+                </div>
+                <button type="submit" class="btn" name="register">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        window.onclick = function (event) {
+            if (event.target == document.getElementById('loginModal')) {
+                document.getElementById('loginModal').style.display = "none";
+            }
+            if (event.target == document.getElementById('registerModal')) {
+                document.getElementById('registerModal').style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

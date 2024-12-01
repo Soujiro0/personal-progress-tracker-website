@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.profile-settings {
+    display: flex;
+    margin-top: 20px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-block: 10px;
+    padding: 10px 5px;
+    border-radius: 3px;
+    border-bottom: solid 1px #c0c0c0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    padding-block: 10px;
+}
+
+.sidebar ul li:hover {
+    background-color: #45a049;
+    border-bottom: solid 1px #5a5a5a;
+    a {
+        color: #f5f5f5;
+    }
+}
+
+.content {
+    width: 75%;
+    background-color: #fff;
+    padding: 20px;
+    margin-left: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-block: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    resize: none;
+    border-radius: 5px;
+}
+
+.form-group input::placeholder,
+.form-group select::placeholder,
+.form-group textarea::placeholder {
+    font-size: 1rem;
+}
+
+.form-group button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form-group button:hover {
+    background-color: #45a049;
+}
+
+.profile-container {
+    background-color: #f9f9f9; /* Light background for the profile section */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Space between profile and settings section */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.profile-container h2 {
+    font-size: 1.5rem; /* Adjust font size for the full name */
+    margin-bottom: 5px; /* Space below the full name */
+}
+
+.profile-container p {
+    font-size: 1rem; /* Font size for the email address */
+    color: #666; /* Slightly darker color for the email */
+}
+
+.logout-container {
+ /* Space above the logout button */
+    margin-top: auto;
+}
+
+.logout-button {
+    background-color: red; /* Red background for the logout button */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* No border */
+    border-radius: 5px; cursor: pointer; /* Pointer cursor on hover */
+    width: 100%; /* Full width for the button */
+    font-size: 1rem; /* Font size for the button text */
+
+}
+
+.logout-button:hover {
+    background-color: darkred; /* Darker red on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .profile-settings {
+        flex-direction: column; /* Stack sidebar and content vertically */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width for sidebar */
+        margin-bottom: 20px; /* Space between sidebar and content */
+    }
+
+    .sidebar ul {
+        margin-bottom: 20px;
+    }
+
+    .content {
+        width: 100%; /* Full width for content */
+        margin-left: 0; /* No margin on the left */
+    }
+
+    .profile-container {
+        margin-bottom: 15px; /* Adjust space below profile container */
+    }
+
+    .profile-container h2 {
+        font-size: 1.25rem; /* Slightly smaller font size for smaller screens */
+    }
+
+    .profile-container p {
+        font-size: 0.9rem; /* Slightly smaller font size for email */
+    }
+}
